@@ -168,6 +168,55 @@ footer a {
   width: 190px;
   height: auto;
 } 
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.modal-content button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}  
+  
 </style>
 </head>
 
@@ -177,7 +226,7 @@ footer a {
 
 <header>
   <div class="logo">MyStack</div>
-  <a href="#" class="cta-small">Join Early Access</a>
+  <button class="cta-small" onclick="openModal()">Join Early Access</button>
 </header>
 
  <div class="hero-icon">
@@ -223,6 +272,27 @@ in one clean, structured system.
 </footer>
 
 </div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Join Early Access</h2>
+    <p>Be the first to test MyStack.</p>
 
+    <form>
+      <input type="email" placeholder="Your email" required>
+      <button type="submit">Request Access</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 </body>
 </html>
