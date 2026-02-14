@@ -240,7 +240,7 @@ footer a {
 
 <header>
   <div class="logo">MyStack</div>
-  <button class="cta-small" onclick="openModal()">Join Early Access →</button>
+  <button class="cta-small" id="earlyAccessBtn">Join Early Access →</button>
 </header>
 
  <div class="hero-icon">
@@ -308,5 +308,88 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 </script>
+<!--Zoho Campaigns Web-Optin Form's Header Code Starts Here-->
+
+<script type="text/javascript" src="https://zcv2-zcmp.maillist-manage.eu/js/optin.min.js" onload="setupSF('sf3zda784475f81c2ef185c8853a4d20ba32616a1b13954844186afa2fa5f63faa37','ZCFORMVIEW',false,'light',false,'0')"></script>
+<script type="text/javascript">
+	function runOnFormSubmit_sf3zda784475f81c2ef185c8853a4d20ba32616a1b13954844186afa2fa5f63faa37(th){
+		/*Before submit, if you want to trigger your event, "include your code here"*/
+	};
+</script>
+
+<style>.quick_form_8_css * { -webkit-box-sizing: border-box !important; -moz-box-sizing: border-box !important; box-sizing: border-box !important; overflow-wrap: break-word }input[type="text"]::placeholder { color: rgb(165, 165, 165) }@media only screen and (max-width: 600px) {.quick_form_8_css[name="SIGNUP_BODY"] { width: 100% !important; min-width: 100% !important; margin: 0px auto !important; padding: 0px !important } .SIGNUP_FLD { width: 90% !important; margin: 10px 5% !important; padding: 0px !important } .SIGNUP_FLD input { margin: 0 !important; border-radius: 25px !important } }</style>
+
+<!--Zoho Campaigns Web-Optin Form's Header Code Ends Here--><!--Zoho Campaigns Web-Optin Form Starts Here-->
+
+<div id="sf3zda784475f81c2ef185c8853a4d20ba32616a1b13954844186afa2fa5f63faa37" data-type="signupform" style="opacity: 1;">
+	<div id="customForm">
+		<div class="quick_form_8_css" style="background-color: rgb(245, 247, 250); width: 345px; z-index: 2; font-family: Arial; border-width: 1px; border-style: solid; border-color: rgb(235, 235, 235); overflow: hidden; height: 84px" name="SIGNUP_BODY">
+			<div>
+				<div style="font-size: 17px; font-family: Lato, Helvetica, sans-serif; font-weight: bold; color: rgb(68, 67, 67); text-align: left; padding: 10px 20px 5px; width: 683px; display: block; background-color: rgb(245, 247, 250); height: 27px" id="SIGNUP_HEADING">Join MyStack Early Access</div>
+				<div style="position:relative;">
+					<div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154);  margin-top: 10px;margin-bottom:10px;word-break:break-all">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							<tbody>
+								<tr>
+									<td width="10%">
+										<img class="successicon" src="https://zcv2-zcmp.maillist-manage.eu/images/challangeiconenable.jpg" align="absmiddle">
+									</td>
+									<td>
+										<span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<form method="POST" id="zcampaignOptinForm" style="margin: 0px; width: 100%" action="https://zcv2-zcmp.maillist-manage.eu/weboptin.zc" target="_zcSignup">
+					<div style="background-color: rgb(255, 235, 232); padding: 10px; color: rgb(210, 0, 0); font-size: 11px; margin: 20px 10px 0px; border: 1px solid rgb(255, 217, 211); opacity: 1; display: none" id="errorMsgDiv">Please correct the marked field(s) below.</div>
+					<div style="position: relative; margin: 10px; width: 171px; height: 30px; display: inline-block" class="SIGNUP_FLD">
+						<input type="text" style="font-size: 14px; border: 1px solid rgb(229, 231, 235); border-radius: 0px; width: 100%; height: 100%; z-index: 4; outline: currentcolor; padding: 5px 10px; color: rgb(107, 114, 128); text-align: left; font-family: Arial; background-color: rgb(255, 255, 255); box-sizing: border-box" placeholder="Enter your email" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+					</div>
+					<div style="position: relative; margin: 10px; width: 112px; height: 30px; text-align: left; display: inline-block" class="SIGNUP_FLD">
+						<input type="button" style="text-align: center; border-radius: 5px; width: 100%; height: 100%; z-index: 5; border: 1px solid rgb(229, 231, 235); color: rgb(255, 255, 255); cursor: pointer; outline: currentcolor; font-size: 14px; background-color: rgb(37, 99, 235); margin: 0px 0px 0px -5px" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Request Access">
+					</div>
+					<input type="hidden" id="fieldBorder" value="">
+					<input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+					<input type="hidden" id="emailReportId" name="emailReportId" value="">
+					<input type="hidden" id="formType" name="formType" value="QuickForm">
+					<input type="hidden" name="zx" id="cmpZuid" value="14aeba155c">
+					<input type="hidden" name="zcvers" value="2.0">
+					<input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+					<input type="hidden" id="mode" name="mode" value="OptinCreateView">
+					<input type="hidden" id="zcld" name="zcld" value="13d2023fbcfec6f7">
+					<input type="hidden" id="zctd" name="zctd" value="13d2023fbcfec541">
+					<input type="hidden" id="document_domain" value="">
+					<input type="hidden" id="zc_Url" value="zcv2-zcmp.maillist-manage.eu">
+					<input type="hidden" id="new_optin_response_in" value="0">
+					<input type="hidden" id="duplicate_optin_response_in" value="0">
+					<input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+					<input type="hidden" id="zc_formIx" name="zc_formIx" value="3zda784475f81c2ef185c8853a4d20ba32616a1b13954844186afa2fa5f63faa37">
+					<input type="hidden" id="viewFrom" value="URL_ACTION">
+					<span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Kontaktens e-postadress,2</span>
+				</form>
+			</div>
+		</div>
+	</div>
+	<img src="https://zcv2-zcmp.maillist-manage.eu/images/spacer.gif" id="refImage" onload="referenceSetter(this)" style="display:none;">
+</div>
+<input type="hidden" id="signupFormType" value="QuickForm_Horizontal">
+<div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
+<div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
+	<span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
+		<img src="https://zcv2-zcmp.maillist-manage.eu/images/videoclose.png">
+	</span>
+	<div id="zcOptinSuccessPanel"></div>
+</div>
+
+<!--Zoho Campaigns Web-Optin Form Ends Here-->  
+  
+<script>
+document.getElementById("earlyAccessBtn").addEventListener("click", function() {
+    document.querySelector("iframe").style.display = "block";
+});
+</script>
+  
 </body>
 </html>
