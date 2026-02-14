@@ -240,7 +240,7 @@ footer a {
 
 <header>
   <div class="logo">MyStack</div>
-  <button class="cta-small" onclick="setupSF()">Join Early Access →</button>
+  <button id="zohoWaitlistBtn" class="cta-small">Join Early Access</button>
 </header>
 
  <div class="hero-icon">
@@ -362,7 +362,15 @@ in one clean, structured system.
 	<div id="zcOptinSuccessPanel"></div>
 </div>
 
-<!--Zoho Campaigns Web-Optin Form Ends Here-->  
+<!--Zoho Campaigns Web-Optin Form Ends Here-->
+
+	<script>
+document.getElementById("zohoWaitlistBtn").addEventListener("click", function() {
+    if (typeof zc_loadForm === "function") {
+        zc_loadForm();
+    }
+});
+</script>
   
 </body>
 </html>
