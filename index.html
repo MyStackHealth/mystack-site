@@ -240,7 +240,7 @@ footer a {
 
 <header>
   <div class="logo">MyStack</div>
-  <button class="cta-small" id="earlyAccessBtn">Join Early Access →</button>
+  <button class="cta-small" onclick="setupSF()">Join Early Access →</button>
 </header>
 
  <div class="hero-icon">
@@ -384,12 +384,6 @@ function closeModal() {
 </div>
 
 <!--Zoho Campaigns Web-Optin Form Ends Here-->  
-  
-<script>
-document.getElementById("earlyAccessBtn").addEventListener("click", function() {
-    document.querySelector("iframe").style.display = "block";
-});
-</script>
   
 </body>
 </html>
