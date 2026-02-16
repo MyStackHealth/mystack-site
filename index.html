@@ -299,13 +299,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var btn = document.getElementById("zohoWaitlistBtn");
 
-  if(btn){
-    btn.onclick = function() {
-      if(typeof zc_loadForm === "function"){
+  if (!btn) return;
+
+  btn.addEventListener("click", function() {
+
+    var checkZoho = setInterval(function() {
+
+      if (typeof zc_loadForm === "function") {
         zc_loadForm();
+        clearInterval(checkZoho);
       }
-    }
-  }
+
+    }, 150);
+
+  });
 
 });
 </script>	
