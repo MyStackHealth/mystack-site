@@ -307,22 +307,14 @@ in one clean, structured system.
 	<script>
 document.addEventListener("DOMContentLoaded", function() {
 
-    var btn = document.getElementById("zohoWaitlistBtn");
+    var preload = setInterval(function() {
 
-    btn.addEventListener("click", function() {
+        if (typeof zc_loadForm === "function") {
+            zc_loadForm();
+            clearInterval(preload);
+        }
 
-        var checkZoho = setInterval(function() {
-
-            var zohoButton = document.querySelector('[id^="zc_"] input[type="button"]');
-
-            if (zohoButton) {
-                zohoButton.click();
-                clearInterval(checkZoho);
-            }
-
-        }, 200);
-
-    });
+    }, 200);
 
 });
 </script>
