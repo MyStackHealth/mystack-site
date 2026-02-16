@@ -308,11 +308,16 @@ in one clean, structured system.
 document.addEventListener("DOMContentLoaded", function () {
 
     var checkZoho = setInterval(function () {
-        if (typeof zc_loadForm === "function") {
+        if (typeof zc_loadForm === "function" && typeof zc_openForm === "function") {
 
             document.getElementById("zohoWaitlistBtn")
                 .addEventListener("click", function () {
+
                     zc_loadForm();
+                    setTimeout(function(){
+                        zc_openForm();
+                    }, 200);
+
                 });
 
             clearInterval(checkZoho);
