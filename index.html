@@ -294,7 +294,21 @@ in one clean, structured system.
 
 <!--Zoho Campaigns Embed Button Starts--> <script type="text/javascript" src="https://zcv2-zcmp.maillist-manage.eu/js/jquery-1.11.0.min.js"></script> <script type='text/javascript' src='https://zcv2-zcmp.maillist-manage.eu/js/jquery-migrate-1.2.1.min.js'></script> <script type='text/javascript' src='https://zcv2-zcmp.maillist-manage.eu/js/jquery-ui-1.10.4.custom.min.js'></script> <div id="zc_popoverlay" style="display:none;background: radial-gradient(50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);height: 100%;left: 0px;overflow-x: hidden;overflow-y: auto;position: fixed;top: 0px;width: 100%;z-index: 2;"> <div style="height: 100%;display:table;margin: 0px auto;position: static;"> <div style="display: table-cell;vertical-align: middle;"> <div style="position:relative;background-color: #fff;box-shadow: 1px 2px 5px #555;border-radius: 3px;padding: 10px;margin: 15px 0px;" id="signUpFormInline"> </div> </div> </div> </div> <div id='embedLink'> <button type="button" purpose="nrmlBtn" class="" style="outline: 0px; background-color: rgb(167, 167, 167); color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); font-size: 14px; padding: 6px 10px; border-radius: 5px; font-family: Arial; text-align: center; width: auto; cursor: pointer;" changetype="EMBED_BUTTON" id="EMBED_BUTTON" name="EMBED_BUTTON" value="Prenumerera på vårt nyhetsbrev" formopenin="Popup" btntype="nrmlBtn" onclick="zc_loadForm('campaigns.zoho.eu','https://zcv2-zcmp.maillist-manage.eu/ua/Optin?od=12ba7f21ff02&amp;zx=14aeba155c&amp;tD=13d2023fbcfec541&amp;sD=13d2023fbcfec75c')"> <span class="zceditcnt">Prenumerera på vårt nyhetsbrev</span> </button> </div> <input type='hidden' id='zc_Url' value='zcv2-zcmp.maillist-manage.eu'/> <input type='hidden' id='zc_formIx' name='zc_formIx' value='3zda784475f81c2ef185c8853a4d20ba32616a1b13954844186afa2fa5f63faa37' > <input type='hidden' id='cmpZuid' name='zx' value='undefined' > <input type='hidden' id='viewFrom' name='viewFrom' value='BUTTON_ACTION' /> <input type='hidden' id='button_tc_codeVal' name='button_tc_codeVal' value='ZCFORMVIEW' /> <script type='text/javascript' src='https://zcv2-zcmp.maillist-manage.eu/js/optin_min.js'></script> <script> var trackingText='ZCFORMVIEW'; var $ZC = jQuery.noConflict(); $ZC('[id=embedLink]').append("<input type='hidden' id='tc_code"+$ZC('[id=embedLink]').size()+"' value="+trackingText+">"); var elemSize = parseInt($ZC('[id=embedLink]').size())-1; var embedLink = $ZC($ZC('[id=embedLink]')[elemSize]).attr('href'); if(embedLink!=undefined && embedLink!=null && embedLink!='null'){ var dynamicCodeVal = $ZC("#tc_code"+$ZC('[id=embedLink]').size()).val(); embedLink = embedLink+'&trackingcode='+dynamicCodeVal; $ZC($ZC('[id=embedLink]')[elemSize]).attr('href',embedLink); $ZC('[id=button_tc_codeVal]').val(dynamicCodeVal); trackSignupEvent(dynamicCodeVal,'buttonView'); } </script> <!-- Zoho Campaigns Embed Button End -->
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
 
-  
+  var btn = document.getElementById("zohoWaitlistBtn");
+
+  if(btn){
+    btn.onclick = function() {
+      if(typeof zc_loadForm === "function"){
+        zc_loadForm();
+      }
+    }
+  }
+
+});
+</script>	
+
 </body>
 </html>
